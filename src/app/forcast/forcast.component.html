@@ -1,0 +1,62 @@
+<div class="main2">
+  <div class="main1">
+    <button class="btn1" routerLink="/landing">Back</button><br><br>
+    <b><label>Enter City name</label><br></b>
+    <input type="text" [(ngModel)]="city"> <br><br>
+    <!-- <button class="btn" [disabled]="!city" (click)="weatherDetails()">WeatherForcast</button><br><br> -->
+    <button class="btn4" [disabled]="!city" (click)="weatherDetails()">ShowWeatherDetails</button><br><br>
+  </div>
+
+  <div *ngIf="ShowWeather">
+    <div class="main">
+      <h1 style="color: fuchsia;">WeatherDetails</h1>
+      <div class="div">
+        <strong> City :- {{city}} </strong><i class="fa fa-home" style="font-size:24px"></i>
+        <img src="assets\Images\25694.png" alt="..." class="png">
+      </div><br>
+
+      <div class="one">
+        <strong style="color:red;">Temperature</strong>
+        <img src="assets\Images\sun.png" alt="..." class="png">
+        :------->{{temp}} <b><sup>0C</sup></b>
+      </div><br>
+
+      <div class="one">
+        <strong style="color:red">Temp_Min</strong>
+        <img src="assets\Images\snow.png" alt="..." class="png">
+        :------->{{temp_min}}<b><sup>0C</sup></b>
+      </div><br>
+
+      <div class="one">
+        <strong style="color:red">Temp_Max</strong>
+        <img src="assets\Images\pine.png" alt="..." class="png">
+        :------->{{temp_max}}<b><sup>0C</sup></b>
+      </div><br>
+
+      <div class="one">
+        <strong style="color: red;">Pressure</strong>
+        <img src="assets\Images\rain.png" alt="..." class="png">
+        :------->{{pressure}}
+      </div><br>
+
+      <div class="one">
+        <strong style="color: red;">Humidity</strong>
+        <img src="assets\Images\download (1).png" alt="..." class="png">
+        :------->{{humidity}}
+      </div><br>
+
+      <div class="one">
+        <strong style="color: red;">WindSpeed</strong>
+        <img src="assets\Images\download.png" alt="..." class="png">
+        :------->{{windspeed}}
+      </div><br>
+
+      <div class="one">
+        <strong style="color: red;">Country</strong>
+        <img src="assets\Images\download.jpeg" alt="..." class="png">
+        :------->{{country}}
+      </div><br>
+
+      <!-- </div> -->
+    </div>
+  </div>
